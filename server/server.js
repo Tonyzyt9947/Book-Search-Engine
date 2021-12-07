@@ -17,7 +17,7 @@ async function init(){
     context: authMiddleware
   });
   await apolloServer.start();
-  apolloServer,applyMiddleware({app});
+  apolloServer.applyMiddleware({app});
 }
 init();
 
