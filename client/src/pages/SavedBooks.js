@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
-// import { getMe, deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { useQuery, useMutation } from '@apollo/client';
@@ -34,11 +33,11 @@ const SavedBooks = () => {
     }
   };
 
-  // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING...</h2>;
   }
 
+  console.log(userData.savedBooks)
   return (
     <>
       <Jumbotron fluid className='text-light bg-dark'>
